@@ -16,9 +16,3 @@ document.querySelector('.submit').addEventListener('click', function () {
 
 });
 
-
-
-
-// TODO: make styling and comment what everything is for
-// * P
-// ? 
