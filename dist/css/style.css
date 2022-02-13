@@ -1,10 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Gideon+Roman&display=swap");
 body {
-  background: #42275a;
+  background: #dce4f3;
   /* fallback for old browsers */
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-gradient(linear, left top, right top, from(#734b6d), to(#42275a));
-  background: linear-gradient(to right, #734b6d, #42275a);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  font-family: 'DM Sans', sans-serif;
+}
+
+* {
+  font-family: 'DM Sans', sans-serif;
 }
 
 .general {
@@ -14,6 +16,15 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.general .paragraph {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .wrapper {
@@ -25,6 +36,39 @@ body {
 }
 
 .li-item {
-  list-style-type: lower-alpha;
+  list-style-type: decimal;
+  border: 1px solid white;
+  margin-bottom: 3px;
+  padding: 5px;
+  color: #000;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.input {
+  padding: 5px;
+  font-size: 16px;
+  border-width: 3px;
+  border-color: #ffffff;
+  background-color: #f1f1f1;
+  color: #000000;
+  border-style: solid;
+  border-radius: 50px;
+}
+
+.submit {
+  background: #39b8ff;
+  border-radius: 17px;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 15px;
+  padding: 6px 13px;
+  text-decoration: none;
+  border: #fff;
+}
+
+form {
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */
