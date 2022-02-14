@@ -1,9 +1,6 @@
 'use strict';
 
 const orderList = document.querySelector('.oredereList');
-const clear = document.querySelector('.clear');
-
-const listOfElements = document.querySelector('.orderedList222');
 
 // document.querySelector('.submit').addEventListener('click', function () {
 //   let a = document.querySelector('.input').value;
@@ -15,12 +12,6 @@ const listOfElements = document.querySelector('.orderedList222');
 //   orderList.appendChild(newListElement);
 // });
 
-const listItem = document.querySelector('li-item');
-
-document.querySelector('.clear').addEventListener('click', function () {
-  console.log('Clear all clicked');
-});
-
 const mainForm = document.querySelector('.main-form');
 
 mainForm.addEventListener('submit', function (e) {
@@ -28,20 +19,32 @@ mainForm.addEventListener('submit', function (e) {
   console.log('Clicked in form');
 
   let input = document.querySelector('.input').value;
+
   console.log(input);
 
-  document.querySelector('li').textContent = input;
-  const newListElement = document.createElement('li');
-  newListElement.classList.add('li-item');
-  newListElement.appendChild(document.createTextNode(input));
-  orderList.appendChild(newListElement);
+  if (input === '') {
+    let heading = document.createElement('p');
+    heading.textContent = 'Please enter something';
+    heading.classList.add('enter');
+    mainForm.appendChild(heading);
 
+    setTimeout(() => {
+      heading.remove();
+    }, 2000);
+  } else {
+    document.querySelector('li').textContent = input;
+    const newListElement = document.createElement('li');
+    newListElement.classList.add('li-item');
+    newListElement.appendChild(document.createTextNode(input));
+    orderList.appendChild(newListElement);
 
-  
-  const clearButton  =document.querySelector('.clear')
+    let inputWithOutValue = document.querySelector('.input');
+    inputWithOutValue.value = '';
+
+    const clearButton = document.querySelector('.clear');
 
     clearButton.addEventListener('click', function () {
-        newListElement.remove()
-    })
-
+      newListElement.remove();
+    });
+  }
 });

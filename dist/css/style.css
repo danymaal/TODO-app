@@ -68,7 +68,27 @@ body {
   border: #fff;
 }
 
+.clear {
+  background: #3393ca;
+  border-radius: 17px;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 15px;
+  padding: 6px 13px;
+  text-decoration: none;
+  border: #fff;
+}
+
 form {
   text-align: center;
+}
+
+.enter {
+  border: 2px solid #fff;
+  background: #3393ca;
+  border-radius: 17px;
+  padding: 7px;
+  color: #fff;
 }
 /*# sourceMappingURL=style.css.map */
