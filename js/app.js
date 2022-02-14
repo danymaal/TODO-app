@@ -23,26 +23,35 @@ mainForm.addEventListener('submit', function (e) {
   console.log(input);
 
   if (input === '') {
+
+    // Выводится сообщение если ничего не ввели и нажали добавить
     let heading = document.createElement('p');
     heading.textContent = 'Please enter something';
     heading.classList.add('enter');
     mainForm.appendChild(heading);
 
+    // Оно удаляется через 2 секунды
     setTimeout(() => {
       heading.remove();
     }, 2000);
   } else {
-    document.querySelector('li').textContent = input;
+    // Создаем новый элемент списка
     const newListElement = document.createElement('li');
+    // Добавляем ему класс со стилями
     newListElement.classList.add('li-item');
+    // Помещаемя в этот элемент то, что ввели в ипуте
     newListElement.appendChild(document.createTextNode(input));
+    // Засовуем элемент в список
     orderList.appendChild(newListElement);
 
+    // Создаем новую переменную инпута без .value , чтобы после сабмита формы инпут очищался
     let inputWithOutValue = document.querySelector('.input');
     inputWithOutValue.value = '';
 
+
     const clearButton = document.querySelector('.clear');
 
+    // Кнопка для очищения списка
     clearButton.addEventListener('click', function () {
       newListElement.remove();
     });
